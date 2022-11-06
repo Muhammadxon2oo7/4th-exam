@@ -16,7 +16,6 @@ function dictonary(e){
         .then(api=>api.json())
         .then(date=>{
             date.forEach(person=>{
-                console.log(person);
                 textName.textContent=person.word + ' - ' + person.phonetics[1].text.split('/').join('');
                 const dec=document.createElement('p')
                 dec.className='description'
@@ -37,7 +36,6 @@ function dictonary(e){
                     audioEl.src = music.audio;
                     audioEl.setAttribute("controls", "")
                 })
-                console.log(audioEl);
             })
 
         })
